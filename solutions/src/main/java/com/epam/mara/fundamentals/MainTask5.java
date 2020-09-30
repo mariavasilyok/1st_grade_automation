@@ -1,4 +1,4 @@
-package com.epam.mara;
+package com.epam.mara.fundamentals;
 
 import java.util.Scanner;
 
