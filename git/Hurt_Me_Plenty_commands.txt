@@ -1,0 +1,34 @@
+1. Создайте ветку storm и добавьте коммит в файл storm.txt:
+Twenty ships with Norsemen braves
+Riding the northern wind
+
+git checkout -b storm
+touch storm.txt
+git add storm.txt
+git commit -m "add lines 1-2 to storm"
+
+2. Добавьте еще 2 строки в storm.txt и сделайте еще один коммит:
+They left their shores at early dawn
+As a red sun was rising in the east
+
+git add storm.txt
+git commit -m "add lines 3-4 to storm"
+
+3. Вернитесь в master и создайте файл pursuit.txt с текстом ниже:
+The warming sun returns again
+And melts away the snow
+The sea is freed from icy chains
+Winter is letting go
+Выполните коммит.
+
+git checkout master
+touch pursuit.txt
+git add pursuit.txt
+git commit -m "add 4 lines to pursuit"
+
+4. Отметьте коммит тегом session1 и перейдите в ветку storm
+git tag session1
+git checkout storm
+
+5. Сделайте rebase ветки storm так чтобы она содержала последний коммит из мастера.
+git rebase master
