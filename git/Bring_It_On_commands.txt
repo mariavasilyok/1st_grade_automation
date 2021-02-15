@@ -1,0 +1,31 @@
+1. Добавьте в проект файл .gitignore и настройте так чтобы скрыть файлы с расширением .db, .log и директории с названиями target или bin.
+
+2. Создайте ветку feature и добавьте в неё два коммита
+git checkout -b feature
+git commit -m "first feature commit"
+git commit -m "second feature commit"
+
+3. Смержите ветку feature в master
+git checkout master
+git merge feature
+
+4. Вернитесь в feature и создайте файл arrows.txt cледующего содержания:
+The ship glides gently on the waves
+As day turns into night
+Выполните коммит.
+git checkout feature
+touch arrows.txt
+git add arrows.txt
+git commit -m "add 2 lines to arrows"
+
+5. Перейдите в master. Создайте там файл arrows.txt и добавьте следующий текст:
+One thousand burning arrows
+Fill the starlit sky
+Выполните коммит.
+git checkout master
+touch arrows.txt
+git add arrows.txt
+git commit -m "add another 2 lines to arrows"
+
+6. Смержите feature в master решив конфликт: сохраните все 4 строки в файле arrows.txt в порядке их добавления в пунктах 4 и 5.
+git merge feature
